@@ -18,7 +18,7 @@ COMPANY = {
     "locations": "USA · China · Taiwan · Vietnam · South Korea",
     "certifications": "ISO 9001:2015 Certified",
     "experience": "30+ Years of Manufacturing Excellence",
-    "ga_id": "G-XXXXXXXXXX",  # Replace with real GA4 ID
+    "ga_id": "G-DNSN4CQVL3",  # Replace with real GA4 ID
 }
 
 NAV_LINKS = [
