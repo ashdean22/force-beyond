@@ -1,0 +1,1194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Superalloy Selection Guide – Find the Right Alloy | ForceBeyond</title>
+    <meta name="description" content="Interactive tool to select the right superalloy for your application. Filter by temperature, environment, strength, and process. Compare Inconel, Hastelloy, Waspaloy, titanium, and more.">
+    <meta name="keywords" content="superalloy selection guide, choose superalloy, nickel alloy comparison, inconel vs hastelloy, alloy selector tool">
+    <link rel="canonical" href="https://www.forcebeyond.com/resources/superalloy-selection-guide/">
+    <link rel="stylesheet" href="/force-beyond/css/styles.css">
+    <style>
+    /* ===== EMBEDDED SITE CSS (for standalone preview) ===== */
+/* ===== FORCEBEYOND — Silver / Navy / White ===== */
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Instrument+Serif:ital@0;1&display=swap');
+
+:root {
+  --navy: #0a1628;
+  --navy-mid: #132040;
+  --navy-light: #1b2d52;
+  --silver: #b8c4d0;
+  --silver-light: #d6dfe8;
+  --silver-pale: #eef2f6;
+  --white: #ffffff;
+  --accent: #3b82f6;
+  --accent-hover: #2563eb;
+  --accent-bright: #60a5fa;
+  --text-dark: #0f172a;
+  --text-mid: #475569;
+  --text-light: #94a3b8;
+  --font-body: 'DM Sans', system-ui, sans-serif;
+  --font-display: 'Instrument Serif', Georgia, serif;
+  --radius: 8px;
+  --radius-lg: 16px;
+  --shadow-sm: 0 1px 3px rgba(10,22,40,0.06);
+  --shadow-md: 0 4px 16px rgba(10,22,40,0.08);
+  --shadow-lg: 0 12px 40px rgba(10,22,40,0.12);
+  --transition: 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: var(--font-body);
+  color: var(--text-dark);
+  background: var(--white);
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+.container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+.section { padding: 80px 0; }
+.section-alt { background: var(--silver-pale); }
+.section-title { font-family: var(--font-display); font-size: 2.25rem; font-weight: 400; color: var(--navy); text-align: center; margin-bottom: 12px; }
+.section-subtitle { text-align: center; color: var(--text-mid); font-size: 1.1rem; margin-bottom: 48px; max-width: 680px; margin-left: auto; margin-right: auto; }
+
+.site-header {
+  position: sticky; top: 0; z-index: 1000;
+  background: rgba(255,255,255,0.92);
+  backdrop-filter: blur(16px);
+  border-bottom: 1px solid var(--silver-light);
+}
+.header-inner {
+  display: flex; align-items: center; justify-content: space-between;
+  height: 72px; gap: 32px;
+}
+.logo { display: flex; align-items: center; gap: 10px; text-decoration: none; }
+.logo-icon { flex-shrink: 0; }
+.logo-text { font-size: 1.25rem; font-weight: 700; color: var(--navy); letter-spacing: -0.02em; }
+.logo-accent { color: var(--accent); }
+.main-nav ul { display: flex; list-style: none; gap: 4px; }
+.main-nav a {
+  display: flex; align-items: center; gap: 4px;
+  padding: 8px 14px; color: var(--text-mid); text-decoration: none;
+  font-size: 0.9rem; font-weight: 500; border-radius: 6px;
+  transition: var(--transition);
+}
+.main-nav a:hover { color: var(--navy); background: var(--silver-pale); }
+.main-nav a svg { opacity: 0.5; }
+
+.has-dropdown { position: relative; }
+.dropdown {
+  display: none; position: absolute; top: 100%; left: 0;
+  background: var(--white); border: 1px solid var(--silver-light);
+  border-radius: var(--radius); box-shadow: var(--shadow-lg);
+  min-width: 260px; padding: 8px; z-index: 100;
+}
+.has-dropdown:hover .dropdown { display: block; }
+.dropdown a {
+  display: block; padding: 10px 14px; color: var(--text-mid);
+  text-decoration: none; font-size: 0.88rem; border-radius: 6px;
+  transition: var(--transition);
+}
+.dropdown a:hover { background: var(--silver-pale); color: var(--navy); }
+
+.header-cta { white-space: nowrap; }
+
+.mobile-toggle {
+  display: none; background: none; border: none; cursor: pointer;
+  width: 40px; height: 40px; position: relative;
+}
+.mobile-toggle span {
+  display: block; width: 22px; height: 2px; background: var(--navy);
+  position: absolute; left: 9px; transition: var(--transition);
+}
+.mobile-toggle span:nth-child(1) { top: 12px; }
+.mobile-toggle span:nth-child(2) { top: 19px; }
+.mobile-toggle span:nth-child(3) { top: 26px; }
+
+@media (max-width: 1024px) {
+  .main-nav { display: none; position: fixed; top: 72px; left: 0; right: 0; bottom: 0; background: var(--white); padding: 24px; overflow-y: auto; }
+  .main-nav.open { display: block; }
+  .main-nav ul { flex-direction: column; gap: 0; }
+  .main-nav a { padding: 14px; font-size: 1rem; }
+  .dropdown { position: static; box-shadow: none; border: none; padding-left: 16px; display: block; }
+  .mobile-toggle { display: block; }
+  .header-cta { display: none; }
+}
+
+.btn {
+  display: inline-flex; align-items: center; justify-content: center;
+  padding: 10px 24px; border-radius: var(--radius); font-weight: 600;
+  font-size: 0.9rem; text-decoration: none; border: 2px solid transparent;
+  cursor: pointer; transition: var(--transition); font-family: var(--font-body);
+}
+.btn-primary { background: var(--accent); color: var(--white); border-color: var(--accent); }
+.btn-primary:hover { background: var(--accent-hover); border-color: var(--accent-hover); transform: translateY(-1px); box-shadow: 0 4px 12px rgba(59,130,246,0.3); }
+.btn-secondary { background: var(--navy); color: var(--white); }
+.btn-secondary:hover { background: var(--navy-mid); }
+.btn-outline { background: transparent; color: var(--white); border-color: rgba(255,255,255,0.4); }
+.btn-outline:hover { background: rgba(255,255,255,0.1); border-color: var(--white); }
+.btn-lg { padding: 14px 32px; font-size: 1rem; }
+.btn-block { width: 100%; }
+
+.trust-strip {
+  background: var(--navy); color: var(--silver); padding: 14px 0;
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+}
+.trust-inner { display: flex; justify-content: center; gap: 40px; flex-wrap: wrap; }
+.trust-item { display: flex; align-items: center; gap: 8px; font-size: 0.82rem; font-weight: 500; white-space: nowrap; }
+.trust-item svg { opacity: 0.7; flex-shrink: 0; }
+@media (max-width: 768px) {
+  .trust-inner { gap: 16px 24px; justify-content: center; }
+  .trust-item { font-size: 0.75rem; }
+}
+
+.page-hero {
+  padding: 64px 0 48px;
+  background: linear-gradient(135deg, var(--navy) 0%, var(--navy-mid) 100%);
+  color: var(--white);
+}
+.page-hero h1 {
+  font-family: var(--font-display); font-size: clamp(2rem, 4vw, 2.75rem);
+  font-weight: 400; max-width: 800px;
+}
+.hero-subtitle { color: var(--silver-light); font-size: 1.1rem; margin-top: 12px; max-width: 640px; }
+.hub-label {
+  display: inline-block; font-size: 0.75rem; font-weight: 700;
+  letter-spacing: 0.1em; text-transform: uppercase;
+  color: var(--accent-bright); padding: 4px 12px;
+  background: rgba(59,130,246,0.15); border-radius: 100px;
+  margin-bottom: 8px;
+}
+
+.cta-section {
+  padding: 80px 0;
+  background: linear-gradient(135deg, var(--navy) 0%, var(--navy-light) 100%);
+  color: var(--white); text-align: center;
+}
+.cta-inner h2 { font-family: var(--font-display); font-size: 2rem; font-weight: 400; margin-bottom: 12px; }
+.cta-inner p { color: var(--silver-light); font-size: 1.05rem; margin-bottom: 32px; }
+.cta-actions { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+
+.site-footer {
+  background: var(--navy); color: var(--silver); padding: 64px 0 32px;
+}
+.footer-grid { display: grid; grid-template-columns: 1.5fr repeat(3, 1fr); gap: 48px; }
+@media (max-width: 768px) { .footer-grid { grid-template-columns: 1fr; gap: 32px; } }
+.footer-logo { margin-bottom: 16px; }
+.footer-logo .logo-text { color: var(--white); }
+.footer-desc { font-size: 0.85rem; line-height: 1.7; color: var(--text-light); margin-bottom: 16px; }
+.footer-contact { font-size: 0.85rem; color: var(--silver); line-height: 1.6; }
+.footer-col h4 { font-size: 0.82rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--white); margin-bottom: 16px; }
+.footer-col ul { list-style: none; }
+.footer-col li { margin-bottom: 8px; }
+.footer-col a { color: var(--text-light); text-decoration: none; font-size: 0.85rem; transition: var(--transition); }
+.footer-col a:hover { color: var(--white); }
+.footer-badges { display: flex; gap: 8px; margin-top: 16px; flex-wrap: wrap; }
+.badge {
+  display: inline-block; padding: 4px 12px; border: 1px solid rgba(255,255,255,0.15);
+  border-radius: 100px; font-size: 0.72rem; font-weight: 600;
+  color: var(--silver); text-transform: uppercase; letter-spacing: 0.05em;
+}
+.footer-bottom {
+  margin-top: 48px; padding-top: 24px;
+  border-top: 1px solid rgba(255,255,255,0.08);
+  display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px;
+}
+.footer-bottom p { font-size: 0.78rem; color: var(--text-light); }
+.footer-locations { font-size: 0.78rem; color: var(--text-light); }
+
+    /* ===== SELECTION GUIDE TOOL STYLES ===== */
+
+    /* ===== SELECTION GUIDE TOOL STYLES ===== */
+    .tool-intro { max-width: 800px; margin: 0 auto 40px; text-align: center; }
+    .tool-intro p { color: var(--text-mid); font-size: 1.05rem; line-height: 1.7; }
+
+    .guide-tool { max-width: 960px; margin: 0 auto; }
+
+    /* Filter Panel */
+    .filter-panel {
+        background: var(--white);
+        border: 1px solid var(--silver-light);
+        border-radius: var(--radius-lg);
+        padding: 32px;
+        margin-bottom: 32px;
+        box-shadow: var(--shadow-sm);
+    }
+    .filter-panel h2 {
+        font-family: var(--font-display);
+        font-size: 1.5rem;
+        color: var(--navy);
+        margin-bottom: 8px;
+        font-weight: 400;
+    }
+    .filter-panel .filter-desc {
+        color: var(--text-mid);
+        font-size: 0.9rem;
+        margin-bottom: 28px;
+    }
+    .filter-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+        gap: 24px;
+    }
+    .filter-group label {
+        display: block;
+        font-size: 0.82rem;
+        font-weight: 700;
+        color: var(--navy);
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        margin-bottom: 8px;
+    }
+    .filter-group select {
+        width: 100%;
+        padding: 12px 16px;
+        border: 1px solid var(--silver-light);
+        border-radius: var(--radius);
+        font-family: var(--font-body);
+        font-size: 0.92rem;
+        color: var(--text-dark);
+        background: var(--white);
+        cursor: pointer;
+        transition: var(--transition);
+        appearance: none;
+        background-image: url("data:image/svg+xml,%3Csvg width='12' height='8' viewBox='0 0 12 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1.5L6 6.5L11 1.5' stroke='%23475569' stroke-width='1.5' stroke-linecap='round'/%3E%3C/svg%3E");
+        background-repeat: no-repeat;
+        background-position: right 14px center;
+        padding-right: 40px;
+    }
+    .filter-group select:focus {
+        outline: none;
+        border-color: var(--accent);
+        box-shadow: 0 0 0 3px rgba(59,130,246,0.1);
+    }
+
+    .filter-actions {
+        display: flex;
+        gap: 12px;
+        margin-top: 24px;
+        padding-top: 24px;
+        border-top: 1px solid var(--silver-pale);
+    }
+    .btn-reset {
+        background: transparent;
+        color: var(--text-mid);
+        border-color: var(--silver-light);
+        font-size: 0.88rem;
+    }
+    .btn-reset:hover {
+        background: var(--silver-pale);
+        color: var(--navy);
+    }
+
+    /* Results */
+    .results-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 20px;
+        flex-wrap: wrap;
+        gap: 12px;
+    }
+    .results-header h2 {
+        font-family: var(--font-display);
+        font-size: 1.5rem;
+        color: var(--navy);
+        font-weight: 400;
+        margin: 0;
+    }
+    .results-count {
+        font-size: 0.88rem;
+        color: var(--text-mid);
+        background: var(--silver-pale);
+        padding: 6px 16px;
+        border-radius: 100px;
+        font-weight: 600;
+    }
+
+    /* Alloy Cards */
+    .alloy-results { display: flex; flex-direction: column; gap: 20px; }
+
+    .alloy-card {
+        background: var(--white);
+        border: 1px solid var(--silver-light);
+        border-radius: var(--radius-lg);
+        overflow: hidden;
+        transition: var(--transition);
+    }
+    .alloy-card:hover {
+        border-color: var(--accent);
+        box-shadow: var(--shadow-md);
+    }
+    .alloy-card-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 24px 28px 0;
+        cursor: pointer;
+        gap: 16px;
+    }
+    .alloy-card-title {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        flex: 1;
+        min-width: 0;
+    }
+    .alloy-name {
+        font-size: 1.15rem;
+        font-weight: 700;
+        color: var(--navy);
+        white-space: nowrap;
+    }
+    .alloy-type-badge {
+        font-size: 0.72rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.06em;
+        padding: 3px 10px;
+        border-radius: 100px;
+        white-space: nowrap;
+    }
+    .badge-ni { background: rgba(59,130,246,0.1); color: #2563eb; }
+    .badge-co { background: rgba(168,85,247,0.1); color: #7c3aed; }
+    .badge-fe { background: rgba(234,179,8,0.1); color: #a16207; }
+    .badge-ti { background: rgba(16,185,129,0.1); color: #059669; }
+
+    .match-score {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        flex-shrink: 0;
+    }
+    .match-bar-bg {
+        width: 80px;
+        height: 6px;
+        background: var(--silver-pale);
+        border-radius: 3px;
+        overflow: hidden;
+    }
+    .match-bar-fill {
+        height: 100%;
+        border-radius: 3px;
+        transition: width 0.5s ease;
+    }
+    .match-bar-fill.high { background: #10b981; }
+    .match-bar-fill.med { background: #f59e0b; }
+    .match-bar-fill.low { background: #94a3b8; }
+    .match-label {
+        font-size: 0.78rem;
+        font-weight: 700;
+        white-space: nowrap;
+    }
+    .match-label.high { color: #059669; }
+    .match-label.med { color: #d97706; }
+    .match-label.low { color: #94a3b8; }
+
+    .alloy-card-expand {
+        width: 28px; height: 28px;
+        display: flex; align-items: center; justify-content: center;
+        border-radius: 50%;
+        background: var(--silver-pale);
+        flex-shrink: 0;
+        transition: var(--transition);
+    }
+    .alloy-card.open .alloy-card-expand { transform: rotate(180deg); }
+
+    /* Quick specs row */
+    .alloy-quick-specs {
+        display: flex;
+        gap: 24px;
+        padding: 16px 28px 20px;
+        flex-wrap: wrap;
+    }
+    .quick-spec {
+        font-size: 0.82rem;
+        color: var(--text-mid);
+    }
+    .quick-spec strong {
+        color: var(--navy);
+        font-weight: 600;
+    }
+
+    /* Expanded detail */
+    .alloy-detail {
+        display: none;
+        padding: 0 28px 28px;
+        border-top: 1px solid var(--silver-pale);
+    }
+    .alloy-card.open .alloy-detail { display: block; }
+
+    .detail-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 24px;
+        margin-top: 20px;
+    }
+    @media (max-width: 640px) { .detail-grid { grid-template-columns: 1fr; } }
+
+    .detail-section h4 {
+        font-size: 0.82rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        color: var(--navy);
+        margin-bottom: 10px;
+    }
+    .detail-section p {
+        font-size: 0.88rem;
+        color: var(--text-mid);
+        line-height: 1.6;
+        margin: 0;
+    }
+    .detail-tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 6px;
+    }
+    .detail-tag {
+        font-size: 0.75rem;
+        padding: 4px 10px;
+        background: var(--silver-pale);
+        border-radius: 100px;
+        color: var(--text-mid);
+        font-weight: 500;
+    }
+    .alloy-actions {
+        display: flex;
+        gap: 12px;
+        margin-top: 20px;
+        padding-top: 16px;
+        border-top: 1px solid var(--silver-pale);
+    }
+    .alloy-actions .btn { font-size: 0.85rem; padding: 10px 20px; }
+
+    /* No results */
+    .no-results {
+        text-align: center;
+        padding: 60px 24px;
+        background: var(--silver-pale);
+        border-radius: var(--radius-lg);
+    }
+    .no-results h3 { color: var(--navy); margin-bottom: 8px; }
+    .no-results p { color: var(--text-mid); font-size: 0.95rem; }
+
+    /* How it works strip */
+    .how-it-works {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 24px;
+        margin-bottom: 40px;
+    }
+    @media (max-width: 768px) { .how-it-works { grid-template-columns: 1fr; } }
+    .step-card {
+        text-align: center;
+        padding: 28px 20px;
+        background: var(--silver-pale);
+        border-radius: var(--radius-lg);
+    }
+    .step-num {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 36px; height: 36px;
+        background: var(--accent);
+        color: var(--white);
+        border-radius: 50%;
+        font-weight: 700;
+        font-size: 0.9rem;
+        margin-bottom: 12px;
+    }
+    .step-card h3 {
+        font-size: 1rem;
+        color: var(--navy);
+        margin-bottom: 6px;
+    }
+    .step-card p {
+        font-size: 0.85rem;
+        color: var(--text-mid);
+        line-height: 1.5;
+        margin: 0;
+    }
+    
+    </style>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-DNSN4CQVL3"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-DNSN4CQVL3');
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "Superalloy Selection Guide",
+      "description": "Interactive tool to help engineers select the optimal superalloy for their application based on temperature, environment, and performance requirements.",
+      "applicationCategory": "Engineering Tool",
+      "operatingSystem": "Web Browser",
+      "provider": {
+        "@type": "Organization",
+        "name": "ForceBeyond",
+        "url": "https://www.forcebeyond.com"
+      }
+    }
+    </script>
+</head>
+<body>
+<header class="site-header">
+    <div class="container header-inner">
+        <a href="/force-beyond/" class="logo">
+            <span class="logo-icon">
+                <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+                    <rect width="32" height="32" rx="6" fill="#0a1628"/>
+                    <path d="M8 10h16M8 16h12M8 22h8" stroke="#3b82f6" stroke-width="2.5" stroke-linecap="round"/>
+                </svg>
+            </span>
+            <span class="logo-text">Force<span class="logo-accent">Beyond</span></span>
+        </a>
+        <nav class="main-nav" id="mainNav">
+            <ul><li><a href="/force-beyond/">Home</a></li>
+<li class="has-dropdown">
+                <a href="/force-beyond/services/">Services <svg width="10" height="6" viewBox="0 0 10 6" fill="none"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></a>
+                <div class="dropdown"><a href="/force-beyond/services/die-casting/">Die Casting</a><a href="/force-beyond/services/investment-casting/">Investment Casting</a><a href="/force-beyond/services/sand-casting/">Sand Casting</a><a href="/force-beyond/services/hot-forging/">Hot Forging</a><a href="/force-beyond/services/cold-forging/">Cold Forging</a><a href="/force-beyond/services/cnc-machining/">CNC Machining</a><a href="/force-beyond/services/supply-chain-management/">Supply Chain Management</a></div>
+            </li>
+<li class="has-dropdown">
+                <a href="/force-beyond/materials/">Materials <svg width="10" height="6" viewBox="0 0 10 6" fill="none"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></a>
+                <div class="dropdown"><a href="/force-beyond/materials/superalloys/">Superalloys</a><a href="/force-beyond/materials/inconel/">Inconel</a><a href="/force-beyond/materials/titanium/">Titanium</a></div>
+            </li>
+<li><a href="/force-beyond/industries/">Industries</a></li>
+<li><a href="/force-beyond/resources/">Resources</a></li>
+<li><a href="/force-beyond/about/">About</a></li>
+<li><a href="/force-beyond/contact/">Contact</a></li></ul>
+        </nav>
+        <a href="/force-beyond/contact/" class="btn btn-primary header-cta">Request Quote</a>
+        <button class="mobile-toggle" id="mobileToggle" aria-label="Menu">
+            <span></span><span></span><span></span>
+        </button>
+    </div>
+</header>
+<div class="trust-strip">
+    <div class="container trust-inner">
+        <div class="trust-item"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg><span>ISO 9001:2015 Certified</span></div>
+        <div class="trust-item"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg><span>30+ Years Experience</span></div>
+        <div class="trust-item"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg><span>US Headquarters, Global Network</span></div>
+        <div class="trust-item"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><path d="M22 4L12 14.01l-3-3"/></svg><span>PPAP I &amp; III Endorsed</span></div>
+    </div>
+</div>
+
+<section class="page-hero resource-hero">
+    <div class="container">
+        <span class="hub-label">Interactive Tool</span>
+        <h1>Superalloy Selection Guide</h1>
+        <p class="hero-subtitle">Answer a few questions about your application and get instant alloy recommendations ranked by fit.</p>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container">
+        <div class="how-it-works">
+            <div class="step-card">
+                <span class="step-num">1</span>
+                <h3>Set Your Requirements</h3>
+                <p>Select operating temperature, environment, and what matters most for your application.</p>
+            </div>
+            <div class="step-card">
+                <span class="step-num">2</span>
+                <h3>Review Matches</h3>
+                <p>Alloys are ranked by how well they fit your criteria. Expand any card for full details.</p>
+            </div>
+            <div class="step-card">
+                <span class="step-num">3</span>
+                <h3>Get a Quote</h3>
+                <p>Found your alloy? Request a free quote and our engineers will confirm the selection.</p>
+            </div>
+        </div>
+
+        <div class="guide-tool">
+            <!-- FILTER PANEL -->
+            <div class="filter-panel">
+                <h2>Define Your Application</h2>
+                <p class="filter-desc">Select one or more criteria below. Results update instantly as you refine your requirements.</p>
+                <div class="filter-grid">
+                    <div class="filter-group">
+                        <label for="filterTemp">Max Operating Temperature</label>
+                        <select id="filterTemp">
+                            <option value="">Any temperature</option>
+                            <option value="750">Up to 750&deg;F (400&deg;C)</option>
+                            <option value="1000">Up to 1,000&deg;F (540&deg;C)</option>
+                            <option value="1300">Up to 1,300&deg;F (704&deg;C)</option>
+                            <option value="1600">Up to 1,600&deg;F (870&deg;C)</option>
+                            <option value="1800">Up to 1,800&deg;F (982&deg;C)</option>
+                            <option value="2200">Above 1,800&deg;F (982&deg;C)</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <label for="filterPriority">Primary Requirement</label>
+                        <select id="filterPriority">
+                            <option value="">Any requirement</option>
+                            <option value="strength">Maximum mechanical strength</option>
+                            <option value="corrosion">Corrosion resistance</option>
+                            <option value="creep">Creep / stress-rupture life</option>
+                            <option value="oxidation">High-temp oxidation resistance</option>
+                            <option value="wear">Wear resistance</option>
+                            <option value="weight">Low weight (strength-to-weight)</option>
+                            <option value="biocompat">Biocompatibility (medical)</option>
+                            <option value="cost">Cost-effective performance</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <label for="filterEnv">Operating Environment</label>
+                        <select id="filterEnv">
+                            <option value="">Any environment</option>
+                            <option value="oxidizing">Oxidizing (air, combustion gases)</option>
+                            <option value="chloride">Chloride / seawater</option>
+                            <option value="reducing">Reducing acids (HCl, H2SO4)</option>
+                            <option value="sour">Sour gas (H2S / CO2)</option>
+                            <option value="cryogenic">Cryogenic</option>
+                            <option value="nuclear">Nuclear radiation</option>
+                            <option value="body">Human body (implant)</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <label for="filterProcess">Manufacturing Process</label>
+                        <select id="filterProcess">
+                            <option value="">Any process</option>
+                            <option value="casting">Investment Casting</option>
+                            <option value="forging">Forging</option>
+                            <option value="machining">CNC Machining from bar/billet</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <label for="filterIndustry">Industry</label>
+                        <select id="filterIndustry">
+                            <option value="">Any industry</option>
+                            <option value="aerospace">Aerospace &amp; Gas Turbines</option>
+                            <option value="oilgas">Oil &amp; Gas / Subsea</option>
+                            <option value="power">Power Generation</option>
+                            <option value="nuclear">Nuclear Energy</option>
+                            <option value="chemical">Chemical Processing</option>
+                            <option value="marine">Marine &amp; Naval</option>
+                            <option value="medical">Medical Devices</option>
+                            <option value="automotive">Automotive &amp; Racing</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="filter-actions">
+                    <button class="btn btn-reset" onclick="resetFilters()">Reset All Filters</button>
+                </div>
+            </div>
+
+            <!-- RESULTS -->
+            <div class="results-header">
+                <h2>Recommended Alloys</h2>
+                <span class="results-count" id="resultsCount">12 alloys</span>
+            </div>
+            <div class="alloy-results" id="alloyResults">
+                <!-- Populated by JS -->
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="cta-section">
+    <div class="container cta-inner">
+        <h2>Need Help Choosing?</h2>
+        <p>Our metallurgical engineers have 30+ years of experience matching alloys to applications. Get a free consultation.</p>
+        <div class="cta-actions">
+            <a href="/force-beyond/contact/" class="btn btn-primary btn-lg">Request a Free Consultation</a>
+            <a href="tel:3029956588" class="btn btn-outline btn-lg">Call (302) 995-6588</a>
+        </div>
+    </div>
+</section>
+
+<footer class="site-footer">
+    <div class="container">
+        <div class="footer-grid">
+            <div class="footer-col">
+                <a href="/force-beyond/" class="logo footer-logo">
+                    <span class="logo-text">Force<span class="logo-accent">Beyond</span></span>
+                </a>
+                <p class="footer-desc">Total solution provider for engineering design, development &amp; supply chain management. ISO 9001:2015 certified with 30+ years of manufacturing excellence.</p>
+                <p class="footer-contact"><strong>(302) 995-6588</strong><br>contact@forcebeyond.com</p>
+            </div>
+            <div class="footer-col">
+                <h4>Services</h4>
+                <ul>
+                    <li><a href="/force-beyond/services/die-casting/">Die Casting</a></li>
+                    <li><a href="/force-beyond/services/investment-casting/">Investment Casting</a></li>
+                    <li><a href="/force-beyond/services/superalloys-casting/">Superalloy Casting</a></li>
+                    <li><a href="/force-beyond/services/inconel-casting/">Inconel Casting</a></li>
+                    <li><a href="/force-beyond/services/titanium-casting/">Titanium Casting</a></li>
+                    <li><a href="/force-beyond/services/superalloys-forging/">Superalloy Forging</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Materials</h4>
+                <ul>
+                    <li><a href="/force-beyond/materials/superalloys/">Superalloys Hub</a></li>
+                    <li><a href="/force-beyond/materials/inconel/">Inconel Hub</a></li>
+                    <li><a href="/force-beyond/materials/titanium/">Titanium Hub</a></li>
+                    <li><a href="/force-beyond/resources/inconel-718-vs-625/">Inconel 718 vs 625</a></li>
+                    <li><a href="/force-beyond/resources/casting-vs-forging-superalloys/">Casting vs Forging</a></li>
+                    <li><a href="/force-beyond/resources/superalloy-selection-guide/">Alloy Selection Guide</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Company</h4>
+                <ul>
+                    <li><a href="/force-beyond/about/">About ForceBeyond</a></li>
+                    <li><a href="/force-beyond/industries/">Industries Served</a></li>
+                    <li><a href="/force-beyond/resources/">Resources &amp; Guides</a></li>
+                    <li><a href="/force-beyond/contact/">Contact Us</a></li>
+                </ul>
+                <div class="footer-badges">
+                    <span class="badge">ISO 9001:2015</span>
+                    <span class="badge">30+ Years</span>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 ForceBeyond. All rights reserved. | New Castle, Delaware, USA</p>
+            <p class="footer-locations">USA &middot; China &middot; Taiwan &middot; Vietnam &middot; South Korea</p>
+        </div>
+    </div>
+</footer>
+<script src="/force-beyond/js/main.js"></script>
+<script>
+// ===== ALLOY DATABASE =====
+const ALLOYS = [
+  {
+    name: "Inconel 718",
+    type: "Ni-based", badge: "badge-ni",
+    uns: "N07718",
+    tensile: "180+ ksi",
+    maxTemp: 1300, maxTempLabel: "~1,300\u00b0F",
+    strengthening: "Precipitation hardened",
+    desc: "The most widely used superalloy worldwide. Exceptional combination of high strength, fatigue resistance, and fabricability. Accounts for ~30% of all superalloy production.",
+    applications: "Turbine discs, shafts, fasteners, compressor blades, rocket components, cryogenic tanks, wellhead equipment",
+    tags: ["strength","corrosion","cryogenic"],
+    envs: ["oxidizing","sour","cryogenic","nuclear"],
+    processes: ["casting","forging","machining"],
+    industries: ["aerospace","oilgas","power","nuclear"],
+    priorities: {strength:10, corrosion:6, creep:5, oxidation:5, wear:3, weight:4, biocompat:0, cost:7},
+    hubLink: "/force-beyond/materials/inconel/",
+    serviceLinks: [
+      {label:"Inconel Casting", href:"/force-beyond/services/inconel-casting/"},
+      {label:"Inconel 718 Forging", href:"/force-beyond/services/inconel-718-forging/"},
+      {label:"Inconel 718 Machining", href:"/force-beyond/services/inconel-718-machining/"}
+    ]
+  },
+  {
+    name: "Inconel 625",
+    type: "Ni-based", badge: "badge-ni",
+    uns: "N06625",
+    tensile: "120\u2013150 ksi",
+    maxTemp: 1800, maxTempLabel: "~1,800\u00b0F",
+    strengthening: "Solid-solution",
+    desc: "The broadest corrosion resistance of any commercial nickel alloy. Outstanding in chloride, seawater, and reducing acid environments. Also used as universal weld filler.",
+    applications: "Subsea connectors, chemical reactors, marine hardware, flue gas desulfurization, exhaust systems, nuclear waste processing",
+    tags: ["corrosion","chloride","marine"],
+    envs: ["oxidizing","chloride","reducing","sour"],
+    processes: ["casting","forging","machining"],
+    industries: ["oilgas","chemical","marine","aerospace","nuclear"],
+    priorities: {strength:5, corrosion:10, creep:5, oxidation:7, wear:3, weight:4, biocompat:0, cost:5},
+    hubLink: "/force-beyond/materials/inconel/",
+    serviceLinks: [
+      {label:"Inconel Casting", href:"/force-beyond/services/inconel-casting/"},
+      {label:"Inconel 625 Forging", href:"/force-beyond/services/inconel-625-forging/"},
+      {label:"Inconel 625 Machining", href:"/force-beyond/services/inconel-625-machining/"}
+    ]
+  },
+  {
+    name: "Inconel 713C",
+    type: "Ni-based", badge: "badge-ni",
+    uns: "N07713",
+    tensile: "110\u2013130 ksi",
+    maxTemp: 1900, maxTempLabel: "~1,900\u00b0F",
+    strengthening: "Precipitation (cast only)",
+    desc: "Optimized for maximum creep resistance at extreme temperatures. Cast-only alloy\u2014too brittle for forging. Excellent stress-rupture properties for turbine hot-section components.",
+    applications: "Turbine wheels, blisks, nozzle guide vanes, hot-section gas turbine components",
+    tags: ["creep","high-temp","cast-only"],
+    envs: ["oxidizing"],
+    processes: ["casting"],
+    industries: ["aerospace","power"],
+    priorities: {strength:5, corrosion:4, creep:10, oxidation:7, wear:3, weight:4, biocompat:0, cost:4},
+    hubLink: "/force-beyond/materials/inconel/",
+    serviceLinks: [
+      {label:"Superalloy Casting", href:"/force-beyond/services/superalloys-casting/"}
+    ]
+  },
+  {
+    name: "Hastelloy X",
+    type: "Ni-based", badge: "badge-ni",
+    uns: "N06002",
+    tensile: "110\u2013130 ksi",
+    maxTemp: 2200, maxTempLabel: "~2,200\u00b0F",
+    strengthening: "Solid-solution",
+    desc: "Exceptional oxidation resistance at the highest service temperatures among wrought alloys. Excellent fabricability and weldability. The standard alloy for combustion hardware.",
+    applications: "Combustion liners, transition ducts, afterburner components, furnace hardware, gas turbine hot-section",
+    tags: ["oxidation","high-temp","weldable"],
+    envs: ["oxidizing"],
+    processes: ["casting","forging","machining"],
+    industries: ["aerospace","power"],
+    priorities: {strength:4, corrosion:5, creep:6, oxidation:10, wear:2, weight:4, biocompat:0, cost:5},
+    hubLink: "/force-beyond/materials/superalloys/",
+    serviceLinks: [
+      {label:"Superalloy Casting", href:"/force-beyond/services/superalloys-casting/"},
+      {label:"Superalloy Forging", href:"/force-beyond/services/superalloys-forging/"}
+    ]
+  },
+  {
+    name: "Hastelloy C-276",
+    type: "Ni-based", badge: "badge-ni",
+    uns: "N10276",
+    tensile: "100\u2013115 ksi",
+    maxTemp: 1500, maxTempLabel: "~1,500\u00b0F",
+    strengthening: "Solid-solution",
+    desc: "Superior resistance to reducing acids (HCl, H2SO4, H3PO4), wet chlorine gas, and mixed acid environments. The workhorse alloy for chemical processing equipment.",
+    applications: "Chemical reactors, scrubbers, heat exchangers, pollution control, pharmaceutical equipment, pulp & paper",
+    tags: ["corrosion","reducing-acid","chemical"],
+    envs: ["reducing","chloride","oxidizing"],
+    processes: ["casting","forging","machining"],
+    industries: ["chemical","oilgas","marine"],
+    priorities: {strength:3, corrosion:10, creep:3, oxidation:5, wear:2, weight:3, biocompat:0, cost:4},
+    hubLink: "/force-beyond/materials/superalloys/",
+    serviceLinks: [
+      {label:"Superalloy Casting", href:"/force-beyond/services/superalloys-casting/"},
+      {label:"Superalloy Machining", href:"/force-beyond/services/superalloys-machining/"}
+    ]
+  },
+  {
+    name: "Waspaloy",
+    type: "Ni-based", badge: "badge-ni",
+    uns: "N07001",
+    tensile: "140\u2013180 ksi",
+    maxTemp: 1600, maxTempLabel: "~1,600\u00b0F",
+    strengthening: "Precipitation hardened",
+    desc: "Excellent creep strength at intermediate temperatures. Good oxidation resistance. Widely used for structural gas turbine components operating between 1,000 and 1,600\u00b0F.",
+    applications: "Turbine blades, rings, cases, discs, shafts, seals, compressor components",
+    tags: ["creep","strength","turbine"],
+    envs: ["oxidizing"],
+    processes: ["casting","forging","machining"],
+    industries: ["aerospace","power"],
+    priorities: {strength:8, corrosion:5, creep:9, oxidation:7, wear:3, weight:4, biocompat:0, cost:5},
+    hubLink: "/force-beyond/materials/superalloys/",
+    serviceLinks: [
+      {label:"Superalloy Casting", href:"/force-beyond/services/superalloys-casting/"},
+      {label:"Superalloy Forging", href:"/force-beyond/services/superalloys-forging/"}
+    ]
+  },
+  {
+    name: "MAR-M-247",
+    type: "Ni-based", badge: "badge-ni",
+    uns: "N/A",
+    tensile: "120\u2013140 ksi",
+    maxTemp: 1900, maxTempLabel: "~1,900\u00b0F",
+    strengthening: "Precipitation (cast only)",
+    desc: "Extreme creep resistance for the hottest sections of gas turbines. Directionally solidified and single-crystal variants push temperature capability even further. Cast only.",
+    applications: "Turbine blades, nozzle guide vanes, hot-section static and rotating components",
+    tags: ["creep","extreme-temp","cast-only"],
+    envs: ["oxidizing"],
+    processes: ["casting"],
+    industries: ["aerospace","power"],
+    priorities: {strength:6, corrosion:4, creep:10, oxidation:8, wear:3, weight:4, biocompat:0, cost:3},
+    hubLink: "/force-beyond/materials/superalloys/",
+    serviceLinks: [
+      {label:"Superalloy Casting", href:"/force-beyond/services/superalloys-casting/"}
+    ]
+  },
+  {
+    name: "Stellite 6",
+    type: "Co-based", badge: "badge-co",
+    uns: "R30006",
+    tensile: "95\u2013120 ksi",
+    maxTemp: 1500, maxTempLabel: "~1,500\u00b0F",
+    strengthening: "Carbide + solid-solution",
+    desc: "The industry standard for wear-resistant applications. Exceptional resistance to galling, abrasion, erosion, and cavitation combined with good hot corrosion resistance.",
+    applications: "Valve seats and gates, pump sleeves, hardfacing overlays, cutting tools, bearing surfaces, wear rings",
+    tags: ["wear","corrosion","hardfacing"],
+    envs: ["oxidizing","reducing"],
+    processes: ["casting","machining"],
+    industries: ["oilgas","chemical","power"],
+    priorities: {strength:4, corrosion:6, creep:4, oxidation:5, wear:10, weight:2, biocompat:0, cost:5},
+    hubLink: "/force-beyond/materials/superalloys/",
+    serviceLinks: [
+      {label:"Superalloy Casting", href:"/force-beyond/services/superalloys-casting/"}
+    ]
+  },
+  {
+    name: "Haynes 188",
+    type: "Co-based", badge: "badge-co",
+    uns: "R30188",
+    tensile: "125\u2013140 ksi",
+    maxTemp: 2000, maxTempLabel: "~2,000\u00b0F",
+    strengthening: "Solid-solution",
+    desc: "Outstanding oxidation resistance combined with good fabricability. Excellent resistance to thermal fatigue from repeated heating and cooling cycles. Good sulfidation resistance.",
+    applications: "Combustion cans, transition ducts, afterburner liners, exhaust manifolds, high-temperature structural components",
+    tags: ["oxidation","thermal-fatigue","weldable"],
+    envs: ["oxidizing"],
+    processes: ["casting","forging","machining"],
+    industries: ["aerospace","power"],
+    priorities: {strength:5, corrosion:5, creep:7, oxidation:9, wear:3, weight:3, biocompat:0, cost:4},
+    hubLink: "/force-beyond/materials/superalloys/",
+    serviceLinks: [
+      {label:"Superalloy Casting", href:"/force-beyond/services/superalloys-casting/"},
+      {label:"Superalloy Forging", href:"/force-beyond/services/superalloys-forging/"}
+    ]
+  },
+  {
+    name: "A-286",
+    type: "Fe-based", badge: "badge-fe",
+    uns: "S66286",
+    tensile: "130\u2013140 ksi",
+    maxTemp: 1300, maxTempLabel: "~1,300\u00b0F",
+    strengthening: "Precipitation hardened",
+    desc: "The most cost-effective superalloy option. Bridges the gap between stainless steels and expensive nickel/cobalt alloys. Good properties at a fraction of the cost.",
+    applications: "Turbine wheels, fasteners, springs, structural components, jet engine casings, exhaust systems",
+    tags: ["cost-effective","strength","budget"],
+    envs: ["oxidizing","nuclear"],
+    processes: ["casting","forging","machining"],
+    industries: ["aerospace","power","nuclear","automotive"],
+    priorities: {strength:7, corrosion:4, creep:5, oxidation:4, wear:2, weight:3, biocompat:0, cost:10},
+    hubLink: "/force-beyond/materials/superalloys/",
+    serviceLinks: [
+      {label:"Superalloy Forging", href:"/force-beyond/services/superalloys-forging/"},
+      {label:"Investment Casting", href:"/force-beyond/services/investment-casting/"}
+    ]
+  },
+  {
+    name: "Ti-6Al-4V (Grade 5)",
+    type: "Titanium", badge: "badge-ti",
+    uns: "R56400",
+    tensile: "130+ ksi",
+    maxTemp: 750, maxTempLabel: "~750\u00b0F",
+    strengthening: "Alpha-beta alloy",
+    desc: "The world's most used titanium alloy (~50% of all Ti). Unmatched strength-to-weight ratio with excellent corrosion resistance. 40% lighter than steel at equivalent strength.",
+    applications: "Airframe structures, engine components, fasteners, landing gear fittings, surgical implants, marine hardware, racing parts",
+    tags: ["lightweight","corrosion","aerospace"],
+    envs: ["oxidizing","chloride","cryogenic","body"],
+    processes: ["casting","forging","machining"],
+    industries: ["aerospace","medical","marine","automotive"],
+    priorities: {strength:8, corrosion:7, creep:3, oxidation:4, wear:3, weight:10, biocompat:7, cost:5},
+    hubLink: "/force-beyond/materials/titanium/",
+    serviceLinks: [
+      {label:"Titanium Casting", href:"/force-beyond/services/titanium-casting/"},
+      {label:"Titanium Forging", href:"/force-beyond/services/titanium-forging/"},
+      {label:"Titanium Machining", href:"/force-beyond/services/titanium-machining/"}
+    ]
+  },
+  {
+    name: "Ti-6Al-4V ELI (Grade 23)",
+    type: "Titanium", badge: "badge-ti",
+    uns: "R56401",
+    tensile: "120+ ksi",
+    maxTemp: 750, maxTempLabel: "~750\u00b0F",
+    strengthening: "Alpha-beta (Extra Low Interstitials)",
+    desc: "Medical-grade titanium with tighter purity controls for enhanced fracture toughness and fatigue resistance. The standard alloy for load-bearing orthopedic and dental implants.",
+    applications: "Hip/knee implants, spinal fusion devices, dental implants, surgical instruments, cryogenic vessels",
+    tags: ["biocompatible","medical","lightweight"],
+    envs: ["body","cryogenic","chloride"],
+    processes: ["casting","forging","machining"],
+    industries: ["medical","aerospace"],
+    priorities: {strength:7, corrosion:7, creep:2, oxidation:3, wear:3, weight:9, biocompat:10, cost:4},
+    hubLink: "/force-beyond/materials/titanium/",
+    serviceLinks: [
+      {label:"Titanium Casting", href:"/force-beyond/services/titanium-casting/"},
+      {label:"Titanium Machining", href:"/force-beyond/services/titanium-machining/"}
+    ]
+  }
+];
+
+// ===== FILTER & RENDER ENGINE =====
+function getFilters() {
+  return {
+    temp: document.getElementById('filterTemp').value,
+    priority: document.getElementById('filterPriority').value,
+    env: document.getElementById('filterEnv').value,
+    process: document.getElementById('filterProcess').value,
+    industry: document.getElementById('filterIndustry').value
+  };
+}
+
+function scoreAlloy(alloy, filters) {
+  let score = 50; // base
+  let maxBonus = 50;
+  let earned = 0;
+  let factors = 0;
+
+  // Temperature fit
+  if (filters.temp) {
+    factors++;
+    const reqTemp = parseInt(filters.temp);
+    if (alloy.maxTemp >= reqTemp) {
+      earned += 10;
+    } else {
+      // Penalize heavily if can't meet temp
+      return -1;
+    }
+  }
+
+  // Priority match
+  if (filters.priority) {
+    factors++;
+    const pScore = alloy.priorities[filters.priority] || 0;
+    earned += pScore; // 0-10
+  }
+
+  // Environment match
+  if (filters.env) {
+    factors++;
+    if (alloy.envs.includes(filters.env)) {
+      earned += 10;
+    } else {
+      earned -= 5;
+    }
+  }
+
+  // Process match
+  if (filters.process) {
+    factors++;
+    if (alloy.processes.includes(filters.process)) {
+      earned += 10;
+    } else {
+      return -1; // Can't be made this way
+    }
+  }
+
+  // Industry match
+  if (filters.industry) {
+    factors++;
+    if (alloy.industries.includes(filters.industry)) {
+      earned += 10;
+    } else {
+      earned -= 3;
+    }
+  }
+
+  if (factors === 0) return 75; // No filters = neutral
+  return Math.round(50 + (earned / (factors * 10)) * 50);
+}
+
+function getMatchClass(score) {
+  if (score >= 75) return 'high';
+  if (score >= 50) return 'med';
+  return 'low';
+}
+function getMatchLabel(score) {
+  if (score >= 85) return 'Excellent';
+  if (score >= 75) return 'Strong';
+  if (score >= 60) return 'Good';
+  if (score >= 45) return 'Fair';
+  return 'Low';
+}
+
+function renderResults() {
+  const filters = getFilters();
+  const container = document.getElementById('alloyResults');
+  const countEl = document.getElementById('resultsCount');
+
+  // Score and sort
+  let scored = ALLOYS.map(a => ({...a, score: scoreAlloy(a, filters)}))
+    .filter(a => a.score > 0)
+    .sort((a, b) => b.score - a.score);
+
+  countEl.textContent = scored.length + ' alloy' + (scored.length !== 1 ? 's' : '');
+
+  if (scored.length === 0) {
+    container.innerHTML = '<div class="no-results"><h3>No exact matches</h3><p>Try broadening your filters, or <a href="/force-beyond/contact/">contact our engineering team</a> for a custom recommendation.</p></div>';
+    return;
+  }
+
+  container.innerHTML = scored.map(a => {
+    const mc = getMatchClass(a.score);
+    const ml = getMatchLabel(a.score);
+    const barW = Math.max(10, Math.min(100, a.score));
+    const svcLinks = a.serviceLinks.map(s => `<a href="${s.href}" class="btn btn-primary">${s.label}</a>`).join('');
+
+    return `
+    <div class="alloy-card" onclick="this.classList.toggle('open')">
+      <div class="alloy-card-header">
+        <div class="alloy-card-title">
+          <span class="alloy-name">${a.name}</span>
+          <span class="alloy-type-badge ${a.badge}">${a.type}</span>
+        </div>
+        <div class="match-score">
+          <div class="match-bar-bg"><div class="match-bar-fill ${mc}" style="width:${barW}%"></div></div>
+          <span class="match-label ${mc}">${ml}</span>
+        </div>
+        <div class="alloy-card-expand">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+        </div>
+      </div>
+      <div class="alloy-quick-specs">
+        <span class="quick-spec"><strong>Tensile:</strong> ${a.tensile}</span>
+        <span class="quick-spec"><strong>Max Temp:</strong> ${a.maxTempLabel}</span>
+        <span class="quick-spec"><strong>UNS:</strong> ${a.uns}</span>
+        <span class="quick-spec"><strong>Type:</strong> ${a.strengthening}</span>
+      </div>
+      <div class="alloy-detail">
+        <div class="detail-grid">
+          <div class="detail-section">
+            <h4>Why This Alloy</h4>
+            <p>${a.desc}</p>
+          </div>
+          <div class="detail-section">
+            <h4>Common Applications</h4>
+            <p>${a.applications}</p>
+          </div>
+          <div class="detail-section">
+            <h4>Available Processes</h4>
+            <div class="detail-tags">
+              ${a.processes.map(p => `<span class="detail-tag">${p.charAt(0).toUpperCase()+p.slice(1)}</span>`).join('')}
+            </div>
+          </div>
+          <div class="detail-section">
+            <h4>Environment Compatibility</h4>
+            <div class="detail-tags">
+              ${a.envs.map(e => `<span class="detail-tag">${e.charAt(0).toUpperCase()+e.slice(1)}</span>`).join('')}
+            </div>
+          </div>
+        </div>
+        <div class="alloy-actions">
+          ${svcLinks}
+          <a href="/force-beyond/contact/" class="btn btn-secondary">Get Quote</a>
+        </div>
+      </div>
+    </div>`;
+  }).join('');
+
+  // GA4 event
+  if (typeof gtag === 'function') {
+    const activeFilters = Object.entries(filters).filter(([k,v]) => v).map(([k,v]) => k+'='+v).join(',');
+    if (activeFilters) {
+      gtag('event', 'alloy_filter', {
+        'event_category': 'tool_usage',
+        'event_label': activeFilters,
+        'value': scored.length
+      });
+    }
+  }
+}
+
+function resetFilters() {
+  document.getElementById('filterTemp').value = '';
+  document.getElementById('filterPriority').value = '';
+  document.getElementById('filterEnv').value = '';
+  document.getElementById('filterProcess').value = '';
+  document.getElementById('filterIndustry').value = '';
+  renderResults();
+}
+
+// Attach listeners
+document.querySelectorAll('.filter-group select').forEach(sel => {
+  sel.addEventListener('change', renderResults);
+});
+
+// Initial render
+renderResults();
+</script>
+</body>
+</html>
