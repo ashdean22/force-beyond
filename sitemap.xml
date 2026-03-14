@@ -141,6 +141,31 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://www.forcebeyond.com/resources/nace-mr0175-material-selection/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.forcebeyond.com/resources/investment-casting-defects-guide/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.forcebeyond.com/resources/superalloy-additive-manufacturing-guide/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.forcebeyond.com/resources/superalloy-welding-guide/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.forcebeyond.com/resources/how-to-specify-superalloy-components/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://www.forcebeyond.com/applications/aerospace-turbine-components/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
