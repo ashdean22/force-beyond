@@ -662,7 +662,7 @@ def head_html(title, meta_desc, keywords="", canonical=""):
     <title>{title} | ForceBeyond</title>
     <meta name="description" content="{meta_desc}">
     <meta name="keywords" content="{keywords}">
-    {f'<link rel="canonical" href="https://www.forcebeyond.com{canonical}">' if canonical else ""}
+    {f'<link rel="canonical" href="https://www.forcebeyondllc.com{canonical}">' if canonical else ""}
     <link rel="stylesheet" href="/css/styles.css">
     <!-- Google Analytics GA4 -->
     <script async src="https://www.googletagmanager.com/gtag/js?id={COMPANY["ga_id"]}"></script>
@@ -678,8 +678,8 @@ def head_html(title, meta_desc, keywords="", canonical=""):
       "@context": "https://schema.org",
       "@type": "Organization",
       "name": "ForceBeyond",
-      "url": "https://www.forcebeyond.com",
-      "logo": "https://www.forcebeyond.com/img/logo.svg",
+      "url": "https://www.forcebeyondllc.com",
+      "logo": "https://www.forcebeyondllc.com/img/logo.svg",
       "description": "Manufacturing total solution provider specializing in superalloy casting, forging, and machining.",
       "address": {{
         "@type": "PostalAddress",
@@ -1388,7 +1388,7 @@ def generate_sitemap(all_urls):
     entries = ""
     for url in all_urls:
         entries += f'''  <url>
-    <loc>https://www.forcebeyond.com{url}</loc>
+    <loc>https://www.forcebeyondllc.com{url}</loc>
     <changefreq>weekly</changefreq>
     <priority>{"1.0" if url == "/" else "0.8"}</priority>
   </url>\n'''
@@ -1400,7 +1400,7 @@ def generate_sitemap(all_urls):
 def generate_robots():
     return """User-agent: *
 Allow: /
-Sitemap: https://www.forcebeyond.com/sitemap.xml
+Sitemap: https://www.forcebeyondllc.com/sitemap.xml
 """
 
 
@@ -1464,7 +1464,7 @@ def build():
     write_file(f"{base}/robots.txt", generate_robots())
 
     # CNAME (optional - update with actual domain)
-    write_file(f"{base}/CNAME", "www.forcebeyond.com")
+    write_file(f"{base}/CNAME", "www.forcebeyondllc.com")
 
     print(f"\n✅ Built {len(all_urls)} pages + sitemap + robots.txt")
     print(f"   Total keyword pages: {len(KEYWORD_PAGES)}")
