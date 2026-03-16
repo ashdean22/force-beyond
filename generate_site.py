@@ -531,7 +531,7 @@ AI_PAGES = [
         <h2>When to Choose Inconel 625</h2>
         <p>Select Inconel 625 when corrosion resistance is the dominant concern, particularly in chloride-bearing environments, seawater, or reducing acid conditions. Typical applications include subsea oil and gas equipment, chemical processing vessels and piping, marine propulsion components, flue gas desulfurization systems, and aerospace exhaust components exposed to combustion products.</p>
         <h2>ForceBeyond Can Help</h2>
-        <p>ForceBeyond manufactures components in both Inconel 718 and Inconel 625 through casting, forging, and CNC machining. Our metallurgical team can help you select the optimal alloy and manufacturing process for your specific application requirements. <a href="/force-beyond/contact/">Contact us</a> for expert guidance and a free quotation.</p>""",
+        <p>ForceBeyond manufactures components in both Inconel 718 and Inconel 625 through casting, forging, and CNC machining. Our metallurgical team can help you select the optimal alloy and manufacturing process for your specific application requirements. <a href="/contact/">Contact us</a> for expert guidance and a free quotation.</p>""",
     },
     {
         "slug": "casting-vs-forging-superalloys",
@@ -561,7 +561,7 @@ AI_PAGES = [
         <tr><td>Lead Time</td><td>8-16 weeks</td><td>6-12 weeks</td></tr>
         </tbody></table></div>
         <h2>ForceBeyond Offers Both</h2>
-        <p>As a total solution provider, ForceBeyond can manufacture your superalloy components through either casting or forging (or a combination of both). Our engineering team collaborates with you to evaluate geometry, performance requirements, production volume, and cost to recommend the optimal manufacturing approach. <a href="/force-beyond/contact/">Request a consultation</a> to discuss your project.</p>""",
+        <p>As a total solution provider, ForceBeyond can manufacture your superalloy components through either casting or forging (or a combination of both). Our engineering team collaborates with you to evaluate geometry, performance requirements, production volume, and cost to recommend the optimal manufacturing approach. <a href="/contact/">Request a consultation</a> to discuss your project.</p>""",
     },
     {
         "slug": "superalloy-selection-guide",
@@ -588,7 +588,7 @@ AI_PAGES = [
         <h2>Step 4: Cost Optimization</h2>
         <p>Superalloy costs vary dramatically. Titanium and cobalt-based alloys carry the highest raw material premiums. Nickel alloys vary based on molybdenum and cobalt content. Near-net-shape casting minimizes expensive material waste. ForceBeyond's engineering team can help identify the most cost-effective alloy that meets all performance requirements—sometimes a lower-cost alloy with optimized heat treatment achieves equivalent performance.</p>
         <h2>Get Expert Guidance</h2>
-        <p>Superalloy selection involves trade-offs that benefit from manufacturing experience. ForceBeyond's metallurgical engineers have 30+ years of experience matching alloys to applications across aerospace, energy, oil and gas, and industrial markets. <a href="/force-beyond/contact/">Contact our team</a> for a material selection consultation at no cost.</p>""",
+        <p>Superalloy selection involves trade-offs that benefit from manufacturing experience. ForceBeyond's metallurgical engineers have 30+ years of experience matching alloys to applications across aerospace, energy, oil and gas, and industrial markets. <a href="/contact/">Contact our team</a> for a material selection consultation at no cost.</p>""",
     },
     {
         "slug": "ai-manufacturing-optimization",
@@ -609,7 +609,7 @@ AI_PAGES = [
         <h2>Supply Chain Intelligence</h2>
         <p>AI is also transforming supply chain management for superalloy components. Predictive analytics help forecast demand patterns, optimize inventory levels, and identify potential supply disruptions before they impact production schedules. ForceBeyond's supply chain management services leverage these technologies to provide customers with reliable delivery schedules and optimized logistics.</p>
         <h2>Partner with ForceBeyond</h2>
-        <p>ForceBeyond combines advanced manufacturing technology with 30+ years of metallurgical expertise to deliver superior quality superalloy components. Whether you need casting, forging, machining, or a complete supply chain solution, our team is ready to support your project. <a href="/force-beyond/contact/">Contact us</a> to discuss how our capabilities can serve your manufacturing needs.</p>""",
+        <p>ForceBeyond combines advanced manufacturing technology with 30+ years of metallurgical expertise to deliver superior quality superalloy components. Whether you need casting, forging, machining, or a complete supply chain solution, our team is ready to support your project. <a href="/contact/">Contact us</a> to discuss how our capabilities can serve your manufacturing needs.</p>""",
     },
     {
         "slug": "5-axis-cnc-challenges-superalloys",
@@ -630,7 +630,7 @@ AI_PAGES = [
         <h2>Challenge 5: Surface Integrity</h2>
         <p>For safety-critical superalloy components in aerospace and nuclear applications, surface integrity—the metallurgical condition of the machined surface—is as important as dimensional accuracy. Aggressive machining can create tensile residual stresses, white layer formation, or microcracking that degrades fatigue life. Controlling cutting parameters, maintaining sharp tools, and applying finishing passes with gentle conditions ensures the machined surface has compressive residual stresses and no detrimental metallurgical changes.</p>
         <h2>ForceBeyond's Machining Expertise</h2>
-        <p>ForceBeyond has developed optimized machining strategies for all major superalloy families through decades of production experience. Our investment in modern CNC equipment, specialized tooling, high-pressure coolant systems, and continuous process refinement enables us to efficiently machine the most challenging superalloys while maintaining the surface integrity required for safety-critical applications. <a href="/force-beyond/contact/">Contact us</a> to discuss your superalloy machining requirements.</p>""",
+        <p>ForceBeyond has developed optimized machining strategies for all major superalloy families through decades of production experience. Our investment in modern CNC equipment, specialized tooling, high-pressure coolant systems, and continuous process refinement enables us to efficiently machine the most challenging superalloys while maintaining the surface integrity required for safety-critical applications. <a href="/contact/">Contact us</a> to discuss your superalloy machining requirements.</p>""",
     },
 ]
 
@@ -663,7 +663,7 @@ def head_html(title, meta_desc, keywords="", canonical=""):
     <meta name="description" content="{meta_desc}">
     <meta name="keywords" content="{keywords}">
     {f'<link rel="canonical" href="https://www.forcebeyond.com{canonical}">' if canonical else ""}
-    <link rel="stylesheet" href="/force-beyond/css/styles.css">
+    <link rel="stylesheet" href="/css/styles.css">
     <!-- Google Analytics GA4 -->
     <script async src="https://www.googletagmanager.com/gtag/js?id={COMPANY["ga_id"]}"></script>
     <script>
@@ -697,7 +697,7 @@ def head_html(title, meta_desc, keywords="", canonical=""):
 def header_html():
     return f'''<header class="site-header">
     <div class="container header-inner">
-        <a href="/force-beyond/" class="logo">
+        <a href="/" class="logo">
             <span class="logo-icon">
                 <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
                     <rect width="32" height="32" rx="6" fill="#0a1628"/>
@@ -709,7 +709,7 @@ def header_html():
         <nav class="main-nav" id="mainNav">
             <ul>{nav_html()}</ul>
         </nav>
-        <a href="/force-beyond/contact/" class="btn btn-primary header-cta">Request Quote</a>
+        <a href="/contact/" class="btn btn-primary header-cta">Request Quote</a>
         <button class="mobile-toggle" id="mobileToggle" aria-label="Menu">
             <span></span><span></span><span></span>
         </button>
@@ -721,7 +721,7 @@ def footer_html():
     <div class="container">
         <div class="footer-grid">
             <div class="footer-col">
-                <a href="/force-beyond/" class="logo footer-logo">
+                <a href="/" class="logo footer-logo">
                     <span class="logo-text">Force<span class="logo-accent">Beyond</span></span>
                 </a>
                 <p class="footer-desc">Total solution provider for engineering design, development &amp; supply chain management. ISO 9001:2015 certified with 30+ years of manufacturing excellence.</p>
@@ -730,32 +730,32 @@ def footer_html():
             <div class="footer-col">
                 <h4>Services</h4>
                 <ul>
-                    <li><a href="/force-beyond/services/die-casting/">Die Casting</a></li>
-                    <li><a href="/force-beyond/services/investment-casting/">Investment Casting</a></li>
-                    <li><a href="/force-beyond/services/superalloys-casting/">Superalloy Casting</a></li>
-                    <li><a href="/force-beyond/services/inconel-casting/">Inconel Casting</a></li>
-                    <li><a href="/force-beyond/services/titanium-casting/">Titanium Casting</a></li>
-                    <li><a href="/force-beyond/services/superalloys-forging/">Superalloy Forging</a></li>
+                    <li><a href="/services/die-casting/">Die Casting</a></li>
+                    <li><a href="/services/investment-casting/">Investment Casting</a></li>
+                    <li><a href="/services/superalloys-casting/">Superalloy Casting</a></li>
+                    <li><a href="/services/inconel-casting/">Inconel Casting</a></li>
+                    <li><a href="/services/titanium-casting/">Titanium Casting</a></li>
+                    <li><a href="/services/superalloys-forging/">Superalloy Forging</a></li>
                 </ul>
             </div>
             <div class="footer-col">
                 <h4>Materials</h4>
                 <ul>
-                    <li><a href="/force-beyond/materials/superalloys/">Superalloys Hub</a></li>
-                    <li><a href="/force-beyond/materials/inconel/">Inconel Hub</a></li>
-                    <li><a href="/force-beyond/materials/titanium/">Titanium Hub</a></li>
-                    <li><a href="/force-beyond/resources/inconel-718-vs-625/">Inconel 718 vs 625</a></li>
-                    <li><a href="/force-beyond/resources/casting-vs-forging-superalloys/">Casting vs Forging</a></li>
-                    <li><a href="/force-beyond/resources/superalloy-selection-guide/">Alloy Selection Guide</a></li>
+                    <li><a href="/materials/superalloys/">Superalloys Hub</a></li>
+                    <li><a href="/materials/inconel/">Inconel Hub</a></li>
+                    <li><a href="/materials/titanium/">Titanium Hub</a></li>
+                    <li><a href="/resources/inconel-718-vs-625/">Inconel 718 vs 625</a></li>
+                    <li><a href="/resources/casting-vs-forging-superalloys/">Casting vs Forging</a></li>
+                    <li><a href="/resources/superalloy-selection-guide/">Alloy Selection Guide</a></li>
                 </ul>
             </div>
             <div class="footer-col">
                 <h4>Company</h4>
                 <ul>
-                    <li><a href="/force-beyond/about/">About ForceBeyond</a></li>
-                    <li><a href="/force-beyond/industries/">Industries Served</a></li>
-                    <li><a href="/force-beyond/resources/">Resources &amp; Guides</a></li>
-                    <li><a href="/force-beyond/contact/">Contact Us</a></li>
+                    <li><a href="/about/">About ForceBeyond</a></li>
+                    <li><a href="/industries/">Industries Served</a></li>
+                    <li><a href="/resources/">Resources &amp; Guides</a></li>
+                    <li><a href="/contact/">Contact Us</a></li>
                 </ul>
                 <div class="footer-badges">
                     <span class="badge">ISO 9001:2015</span>
@@ -769,7 +769,7 @@ def footer_html():
         </div>
     </div>
 </footer>
-<script src="/force-beyond/js/main.js"></script>'''
+<script src="/js/main.js"></script>'''
 
 def trust_strip():
     return '''<div class="trust-strip">
@@ -787,7 +787,7 @@ def cta_section():
         <h2>Ready to Start Your Project?</h2>
         <p>Get a free quote within 24 hours. Our engineering team is standing by to discuss your requirements.</p>
         <div class="cta-actions">
-            <a href="/force-beyond/contact/" class="btn btn-primary btn-lg">Request a Free Quote</a>
+            <a href="/contact/" class="btn btn-primary btn-lg">Request a Free Quote</a>
             <a href="tel:3029956588" class="btn btn-outline btn-lg">Call (302) 995-6588</a>
         </div>
     </div>
@@ -839,7 +839,7 @@ def generate_keyword_page(page):
 
     hub_link = ""
     if page.get("hub"):
-        hub_link = f'<a href="/force-beyond/materials/{page["hub"]}/" class="breadcrumb-link">&larr; Back to {page["hub"].title()} Hub</a>'
+        hub_link = f'<a href="/materials/{page["hub"]}/" class="breadcrumb-link">&larr; Back to {page["hub"].title()} Hub</a>'
 
     canonical = f'/{page["dir"]}/{page["slug"]}/'
     html = f'''{head_html(page["title"], page["meta_desc"], page.get("keywords",""), canonical)}
@@ -854,7 +854,7 @@ def generate_keyword_page(page):
         <h1>{page["h1"]}</h1>
         <p class="hero-subtitle">{page["hero_text"]}</p>
         <div class="hero-actions">
-            <a href="/force-beyond/contact/" class="btn btn-primary btn-lg">Get a Free Quote</a>
+            <a href="/contact/" class="btn btn-primary btn-lg">Get a Free Quote</a>
             <a href="tel:3029956588" class="btn btn-outline btn-lg">Call (302) 995-6588</a>
         </div>
     </div>
@@ -871,7 +871,7 @@ def generate_keyword_page(page):
             <div class="sidebar-card">
                 <h3>Quick Quote</h3>
                 <p>Send us your drawings or specifications and receive a detailed quotation within 24 hours.</p>
-                <a href="/force-beyond/contact/" class="btn btn-primary btn-block">Request Quote</a>
+                <a href="/contact/" class="btn btn-primary btn-block">Request Quote</a>
                 <p class="sidebar-phone">Or call: <strong>(302) 995-6588</strong></p>
             </div>
             <div class="sidebar-card">
@@ -888,11 +888,11 @@ def generate_keyword_page(page):
             <div class="sidebar-card">
                 <h3>Related Services</h3>
                 <ul class="related-links">
-                    <li><a href="/force-beyond/materials/superalloys/">Superalloys Hub</a></li>
-                    <li><a href="/force-beyond/materials/inconel/">Inconel Hub</a></li>
-                    <li><a href="/force-beyond/materials/titanium/">Titanium Hub</a></li>
-                    <li><a href="/force-beyond/services/investment-casting/">Investment Casting</a></li>
-                    <li><a href="/force-beyond/resources/inconel-718-vs-625/">Inconel 718 vs 625</a></li>
+                    <li><a href="/materials/superalloys/">Superalloys Hub</a></li>
+                    <li><a href="/materials/inconel/">Inconel Hub</a></li>
+                    <li><a href="/materials/titanium/">Titanium Hub</a></li>
+                    <li><a href="/services/investment-casting/">Investment Casting</a></li>
+                    <li><a href="/resources/inconel-718-vs-625/">Inconel 718 vs 625</a></li>
                 </ul>
             </div>
         </aside>
@@ -977,16 +977,16 @@ def generate_ai_page(page):
             <div class="sidebar-card">
                 <h3>Quick Quote</h3>
                 <p>Ready to discuss your project? Get a quote within 24 hours.</p>
-                <a href="/force-beyond/contact/" class="btn btn-primary btn-block">Request Quote</a>
+                <a href="/contact/" class="btn btn-primary btn-block">Request Quote</a>
             </div>
             <div class="sidebar-card">
                 <h3>More Resources</h3>
                 <ul class="related-links">
-                    <li><a href="/force-beyond/resources/inconel-718-vs-625/">Inconel 718 vs 625</a></li>
-                    <li><a href="/force-beyond/resources/casting-vs-forging-superalloys/">Casting vs Forging</a></li>
-                    <li><a href="/force-beyond/resources/superalloy-selection-guide/">Alloy Selection Guide</a></li>
-                    <li><a href="/force-beyond/resources/ai-manufacturing-optimization/">AI in Manufacturing</a></li>
-                    <li><a href="/force-beyond/resources/5-axis-cnc-challenges-superalloys/">CNC Machining Challenges</a></li>
+                    <li><a href="/resources/inconel-718-vs-625/">Inconel 718 vs 625</a></li>
+                    <li><a href="/resources/casting-vs-forging-superalloys/">Casting vs Forging</a></li>
+                    <li><a href="/resources/superalloy-selection-guide/">Alloy Selection Guide</a></li>
+                    <li><a href="/resources/ai-manufacturing-optimization/">AI in Manufacturing</a></li>
+                    <li><a href="/resources/5-axis-cnc-challenges-superalloys/">CNC Machining Challenges</a></li>
                 </ul>
             </div>
         </aside>
@@ -1032,8 +1032,8 @@ def generate_homepage():
             <h1>Superalloy &amp; Precision Metal<br><span class="hero-highlight">Manufacturing Solutions</span></h1>
             <p class="hero-desc">From Inconel turbine castings to titanium aerospace forgings—ForceBeyond delivers world-class components with 30+ years of manufacturing excellence, ISO 9001:2015 certification, and a globally integrated supply chain.</p>
             <div class="hero-actions">
-                <a href="/force-beyond/contact/" class="btn btn-primary btn-lg">Request a Free Quote</a>
-                <a href="/force-beyond/services/" class="btn btn-outline btn-lg">Explore Services</a>
+                <a href="/contact/" class="btn btn-primary btn-lg">Request a Free Quote</a>
+                <a href="/services/" class="btn btn-outline btn-lg">Explore Services</a>
             </div>
         </div>
         <div class="hero-stats">
@@ -1061,19 +1061,19 @@ def generate_homepage():
         <h2 class="section-title">Material Expertise Hubs</h2>
         <p class="section-subtitle">Deep technical resources for each material family we serve.</p>
         <div class="hub-grid">
-            <a href="/force-beyond/materials/superalloys/" class="hub-card hub-card-featured">
+            <a href="/materials/superalloys/" class="hub-card hub-card-featured">
                 <span class="hub-card-label">Material Hub</span>
                 <h3>Superalloys</h3>
                 <p>Complete guide to casting, forging, and machining nickel-based, cobalt-based, and iron-based superalloys.</p>
                 <span class="hub-card-arrow">&rarr;</span>
             </a>
-            <a href="/force-beyond/materials/inconel/" class="hub-card hub-card-featured">
+            <a href="/materials/inconel/" class="hub-card hub-card-featured">
                 <span class="hub-card-label">Material Hub</span>
                 <h3>Inconel</h3>
                 <p>In-depth coverage of Inconel 718, 625, and other grades—casting, forging, machining, and alloy comparison.</p>
                 <span class="hub-card-arrow">&rarr;</span>
             </a>
-            <a href="/force-beyond/materials/titanium/" class="hub-card hub-card-featured">
+            <a href="/materials/titanium/" class="hub-card hub-card-featured">
                 <span class="hub-card-label">Material Hub</span>
                 <h3>Titanium</h3>
                 <p>Ti-6Al-4V and other titanium alloy manufacturing for aerospace, medical, and defense applications.</p>
@@ -1096,7 +1096,7 @@ def generate_homepage():
             <h2>Total Solution Provider</h2>
             <p>ForceBeyond, headquartered in New Castle, Delaware, is a manufacturing total solution provider delivering engineering design, product development, production, and logistics services. With locations in the USA, China, Taiwan, Vietnam, and South Korea, we feature globally integrated manufacturing resources that achieve the ideal balance of superior quality and cost efficiency.</p>
             <p>Our proven processes incorporate the latest production technologies and quality assurance procedures. We endorse PPAP I and PPAP III processes, and our quality control spans engineering design review, raw material inspection, production auditing, and pre-shipment inspection.</p>
-            <a href="/force-beyond/about/" class="btn btn-secondary">Learn More About Us &rarr;</a>
+            <a href="/about/" class="btn btn-secondary">Learn More About Us &rarr;</a>
         </div>
     </div>
 </section>
@@ -1371,7 +1371,7 @@ def generate_404():
     <div class="container">
         <h1 style="font-size:4rem; color:var(--navy);">404</h1>
         <p style="font-size:1.25rem; margin:24px 0;">The page you're looking for doesn't exist.</p>
-        <a href="/force-beyond/" class="btn btn-primary">Return Home</a>
+        <a href="/" class="btn btn-primary">Return Home</a>
     </div>
 </section>
 {footer_html()}
