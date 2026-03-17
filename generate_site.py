@@ -90,7 +90,7 @@ KEYWORD_PAGES = [
             {"heading": "What Is Superalloy Forging?", "body": "Superalloy forging is a metal forming process that uses controlled compressive forces to shape nickel-based, cobalt-based, and iron-based high-temperature alloys into high-strength components. Unlike casting, forging refines the grain structure of the metal through plastic deformation, producing parts with superior fatigue strength, impact resistance, and directional mechanical properties. At CastAlloy, we offer both open-die and closed-die forging of superalloys, with forging press capacities from 800 to over 2,000 metric tons. Our isothermal forging capability maintains the workpiece at elevated temperature throughout the forming process, which is critical for achieving proper material flow in low-ductility superalloys."},
             {"heading": "Forging Process & Capabilities", "body": "Our superalloy forging process begins with careful billet preparation and heating to the precise forging temperature window for each alloy. For nickel-based superalloys like Inconel 718, this typically ranges from 1,700°F to 2,050°F depending on the desired microstructure. We utilize medium-frequency induction furnaces for uniform heating, followed by forging on hydraulic or mechanical presses. Post-forging heat treatments including solution annealing and aging are performed to optimize the final mechanical properties. Our CNC machining centers then bring forged components to final dimensional specifications with tight tolerances."},
             {"heading": "Materials & Applications", "body": "We forge a comprehensive range of superalloy grades including Inconel 718, Inconel 625, Waspaloy, Hastelloy, René alloys, and various cobalt-based compositions. These forged components serve demanding applications in jet engine discs and shafts, industrial gas turbine rotors, nuclear reactor vessel internals, oil and gas subsea equipment, and high-pressure chemical processing vessels. The inherent strength advantage of forged components over cast alternatives makes forging the preferred process for rotating parts, pressure-containing components, and any application where fatigue life is the primary design driver."},
-            {"heading": "Why Choose CastAlloy for Superalloy Forging?", "body": "CastAlloy combines 30+ years of metallurgical expertise with globally integrated manufacturing resources to deliver superior quality superalloy forgings at competitive costs. Our engineering team collaborates with customers from initial design through production, optimizing forging parameters and die designs to maximize material yield and minimize machining allowances. With ISO 9001:2015 certification and processes aligned to aerospace quality standards, we ensure full traceability and documentation for every forged component. Our US headquarters in Delaware provides responsive local support, while our global manufacturing network delivers cost-efficient production volumes."},
+            {"heading": "Why Choose CastAlloy for Superalloy Forging?", "body": "CastAlloy combines 30+ years of metallurgical expertise with globally integrated manufacturing resources to deliver superior quality superalloy forgings at competitive costs. Our engineering team collaborates with customers from initial design through production, optimizing forging parameters and die designs to maximize material yield and minimize machining allowances. With ISO 9001:2015 certification and processes aligned to aerospace quality standards, we ensure full traceability and documentation for every forged component. Our US headquarters in Richmond provides responsive local support, while our global manufacturing network delivers cost-efficient production volumes."},
         ],
         "specs_table": [
             ["Forging Type", "Open-die, Closed-die, Isothermal"],
@@ -1168,7 +1168,7 @@ def generate_contact_page():
             <div class="sidebar-card">
                 <h3>Global Locations</h3>
                 <ul class="check-list">
-                    <li>USA (Delaware &amp; California)</li>
+                    <li>USA (Richmond &amp; California)</li>
                     <li>China</li>
                     <li>Taiwan</li>
                     <li>Vietnam</li>
@@ -1190,7 +1190,7 @@ def generate_contact_page():
 
 
 def generate_about_page():
-    html = f'''{head_html("About CastAlloy – Company Profile", "CastAlloy is a manufacturing total solution provider headquartered in Richmond, Virginia. ISO 9001:2015 certified with 30+ years experience in casting, forging, and machining.", "about castalloy, company profile, manufacturing company delaware", "/about/")}
+    html = f'''{head_html("About CastAlloy – Company Profile", "CastAlloy is a manufacturing total solution provider headquartered in Richmond, Virginia. ISO 9001:2015 certified with 30+ years experience in casting, forging, and machining.", "about castalloy, company profile, manufacturing company richmond", "/about/")}
 <body>
 {header_html()}
 {trust_strip()}
