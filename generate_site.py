@@ -1109,7 +1109,7 @@ def generate_homepage():
 
 
 def generate_contact_page():
-    html = f'''{head_html("Contact Us – Request a Quote", "Contact CastAlloy for a free quote on superalloy casting, Inconel forging, titanium machining, die casting, and more. Response within 24 hours.", "contact forcebeyond, request quote, manufacturing quote", "/contact/")}
+    html = f'''{head_html("Contact Us – Request a Quote", "Contact CastAlloy for a free quote on superalloy casting, Inconel forging, titanium machining, die casting, and more. Response within 24 hours.", "contact castalloy, request quote, manufacturing quote", "/contact/")}
 <body>
 {header_html()}
 {trust_strip()}
@@ -1190,7 +1190,7 @@ def generate_contact_page():
 
 
 def generate_about_page():
-    html = f'''{head_html("About CastAlloy – Company Profile", "CastAlloy is a manufacturing total solution provider headquartered in New Castle, Delaware. ISO 9001:2015 certified with 30+ years experience in casting, forging, and machining.", "about forcebeyond, company profile, manufacturing company delaware", "/about/")}
+    html = f'''{head_html("About CastAlloy – Company Profile", "CastAlloy is a manufacturing total solution provider headquartered in New Castle, Delaware. ISO 9001:2015 certified with 30+ years experience in casting, forging, and machining.", "about castalloy, company profile, manufacturing company delaware", "/about/")}
 <body>
 {header_html()}
 {trust_strip()}
@@ -1415,7 +1415,7 @@ def write_file(path, content):
     print(f"  ✓ {path}")
 
 def build():
-    base = "/home/claude/forcebeyond-site/dist"
+    base = "/home/claude/castalloy-site/dist"
     all_urls = ["/"]
 
     print("Building CastAlloy site...")
