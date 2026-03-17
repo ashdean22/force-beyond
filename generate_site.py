@@ -12,9 +12,9 @@ import os, json
 COMPANY = {
     "name": "CastAlloy",
     "tagline": "Engineering Design, Development &amp; Supply Chain Management",
-    "phone": "(302) 995-6588",
-    "email": "contact@cast-alloy.com",
-    "address": "New Castle, Delaware, USA",
+    "phone": "",
+    "email": "",
+    "address": "Richmond, Virginia, USA",
     "locations": "USA · China · Taiwan · Vietnam · South Korea",
     "certifications": "ISO 9001:2015 Certified",
     "experience": "30+ Years of Manufacturing Excellence",
@@ -683,12 +683,12 @@ def head_html(title, meta_desc, keywords="", canonical=""):
       "description": "Manufacturing total solution provider specializing in superalloy casting, forging, and machining.",
       "address": {{
         "@type": "PostalAddress",
-        "addressLocality": "New Castle",
-        "addressRegion": "DE",
+        "addressLocality": "Richmond",
+        "addressRegion": "VA",
         "addressCountry": "US"
       }},
-      "telephone": "(302) 995-6588",
-      "email": "contact@cast-alloy.com",
+      "telephone": "",
+      "email": "",
       "sameAs": ["https://www.linkedin.com/company/castalloy"]
     }}
     </script>
@@ -764,7 +764,7 @@ def footer_html():
             </div>
         </div>
         <div class="footer-bottom">
-            <p>&copy; 2026 CastAlloy. All rights reserved. | New Castle, Delaware, USA</p>
+            <p>&copy; 2026 CastAlloy. All rights reserved. | Richmond, Virginia, USA</p>
             <p class="footer-locations">{COMPANY["locations"]}</p>
         </div>
     </div>
@@ -788,7 +788,7 @@ def cta_section():
         <p>Get a free quote within 24 hours. Our engineering team is standing by to discuss your requirements.</p>
         <div class="cta-actions">
             <a href="/contact/" class="btn btn-primary btn-lg">Request a Free Quote</a>
-            <a href="tel:3029956588" class="btn btn-outline btn-lg">Call (302) 995-6588</a>
+            
         </div>
     </div>
 </section>'''
@@ -855,7 +855,7 @@ def generate_keyword_page(page):
         <p class="hero-subtitle">{page["hero_text"]}</p>
         <div class="hero-actions">
             <a href="/contact/" class="btn btn-primary btn-lg">Get a Free Quote</a>
-            <a href="tel:3029956588" class="btn btn-outline btn-lg">Call (302) 995-6588</a>
+            
         </div>
     </div>
 </section>
@@ -872,7 +872,7 @@ def generate_keyword_page(page):
                 <h3>Quick Quote</h3>
                 <p>Send us your drawings or specifications and receive a detailed quotation within 24 hours.</p>
                 <a href="/contact/" class="btn btn-primary btn-block">Request Quote</a>
-                <p class="sidebar-phone">Or call: <strong>(302) 995-6588</strong></p>
+                <p class="sidebar-phone"></p>
             </div>
             <div class="sidebar-card">
                 <h3>Why CastAlloy?</h3>
@@ -1094,7 +1094,7 @@ def generate_homepage():
     <div class="container about-preview">
         <div class="about-text">
             <h2>Total Solution Provider</h2>
-            <p>CastAlloy, headquartered in New Castle, Delaware, is a manufacturing total solution provider delivering engineering design, product development, production, and logistics services. With locations in the USA, China, Taiwan, Vietnam, and South Korea, we feature globally integrated manufacturing resources that achieve the ideal balance of superior quality and cost efficiency.</p>
+            <p>CastAlloy, headquartered in Richmond, Virginia, is a manufacturing total solution provider delivering engineering design, product development, production, and logistics services. With locations in the USA, China, Taiwan, Vietnam, and South Korea, we feature globally integrated manufacturing resources that achieve the ideal balance of superior quality and cost efficiency.</p>
             <p>Our proven processes incorporate the latest production technologies and quality assurance procedures. We endorse PPAP I and PPAP III processes, and our quality control spans engineering design review, raw material inspection, production auditing, and pre-shipment inspection.</p>
             <a href="/about/" class="btn btn-secondary">Learn More About Us &rarr;</a>
         </div>
@@ -1161,9 +1161,9 @@ def generate_contact_page():
         <aside class="content-sidebar">
             <div class="sidebar-card">
                 <h3>Direct Contact</h3>
-                <p><strong>Phone:</strong><br><a href="tel:3029956588">(302) 995-6588</a></p>
-                <p><strong>Email:</strong><br><a href="mailto:contact@cast-alloy.com">contact@cast-alloy.com</a></p>
-                <p><strong>Headquarters:</strong><br>New Castle, Delaware, USA</p>
+                <p><strong>Phone:</strong><br><a href="#"></a></p>
+                <p><strong>Email:</strong><br><a href="mailto:"></a></p>
+                <p><strong>Headquarters:</strong><br>Richmond, Virginia, USA</p>
             </div>
             <div class="sidebar-card">
                 <h3>Global Locations</h3>
@@ -1190,7 +1190,7 @@ def generate_contact_page():
 
 
 def generate_about_page():
-    html = f'''{head_html("About CastAlloy – Company Profile", "CastAlloy is a manufacturing total solution provider headquartered in New Castle, Delaware. ISO 9001:2015 certified with 30+ years experience in casting, forging, and machining.", "about castalloy, company profile, manufacturing company delaware", "/about/")}
+    html = f'''{head_html("About CastAlloy – Company Profile", "CastAlloy is a manufacturing total solution provider headquartered in Richmond, Virginia. ISO 9001:2015 certified with 30+ years experience in casting, forging, and machining.", "about castalloy, company profile, manufacturing company delaware", "/about/")}
 <body>
 {header_html()}
 {trust_strip()}
@@ -1206,7 +1206,7 @@ def generate_about_page():
     <div class="container">
         <div class="about-content">
             <h2>Company Profile</h2>
-            <p>CastAlloy, headquartered in New Castle, Delaware, is a manufacturing total solution provider encompassing engineering design, product development, production, and logistics. We partner with our customers by offering superior quality products and comprehensive supply chain management services.</p>
+            <p>CastAlloy, headquartered in Richmond, Virginia, is a manufacturing total solution provider encompassing engineering design, product development, production, and logistics. We partner with our customers by offering superior quality products and comprehensive supply chain management services.</p>
             <p>CastAlloy features globally integrated manufacturing resources with locations in the USA, China, Taiwan, Vietnam, and South Korea. Our structure achieves the ideal balance of superior quality and cost efficiency. Our proven processes incorporate the latest production technologies and quality assurance procedures, allowing customers to partner with world-class manufacturers for engineered parts and components.</p>
 
             <h2>Manufacturing Capabilities</h2>
@@ -1216,7 +1216,7 @@ def generate_about_page():
             <p>CastAlloy is a fully certified ISO 9001:2015 company dedicated to the highest quality standards. We endorse PPAP I and PPAP III processes. Our quality control encompasses engineering design review, raw material inspection with independent test lab reports, during-production inspection, initial production auditing, random sampling of early batch production, pre-shipment inspection, and container-load verification.</p>
 
             <h2>Supply Chain Excellence</h2>
-            <p>As a total solutions provider, we manage the complete supply chain from engineering design and prototype development through volume production and international logistics. Our warehouses in New Castle, Delaware and Los Angeles, California provide convenient stock retrieval and JIT delivery capabilities for our North American customers. Our inventory management software forecasts yearly usage and reorder points, allowing proactive purchasing to ensure on-time delivery.</p>
+            <p>As a total solutions provider, we manage the complete supply chain from engineering design and prototype development through volume production and international logistics. Our warehouses in Richmond, Virginia and Los Angeles, California provide convenient stock retrieval and JIT delivery capabilities for our North American customers. Our inventory management software forecasts yearly usage and reorder points, allowing proactive purchasing to ensure on-time delivery.</p>
 
             <div class="about-stats">
                 <div class="stat-card"><span class="stat-num">30+</span><span class="stat-label">Years of Experience</span></div>
