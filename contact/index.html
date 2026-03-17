@@ -92,33 +92,49 @@
             <div class="contact-form-wrap">
                 <h2>Request a Quote</h2>
                 <p>Fill out the form below and our engineering team will respond within one business day.</p>
-                <form action="https://n8n.outlander.ventures/webhook/6dfa0c30-4688-4e26-9f0b-551e3a6f4be0" method="POST">
-                    <div class="form-group"><label>Name *</label><input type="text" placeholder="Your full name" /></div>
-                    <div class="form-group"><label>Company</label><input type="text" placeholder="Company name" /></div>
-                    <div class="form-group"><label>Email *</label><input type="email" placeholder="your@email.com" /></div>
-                    <div class="form-group"><label>Phone</label><input type="tel" placeholder="(XXX) XXX-XXXX" /></div>
-                    <div class="form-group"><label>Service Needed</label>
-                        <select>
+                <form action="/submit-quote" method="POST">
+                    <div class="form-group">
+                        <label>Name *</label>
+                        <input type="text" name="name" required placeholder="Your full name" />
+                    </div>
+                    <div class="form-group">
+                        <label>Company</label>
+                        <input type="text" name="company" placeholder="Company name" />
+                    </div>
+                    <div class="form-group">
+                        <label>Email *</label>
+                        <input type="email" name="email" required placeholder="your@email.com" />
+                    </div>
+                    <div class="form-group">
+                        <label>Phone</label>
+                        <input type="tel" name="phone" placeholder="(XXX) XXX-XXXX" />
+                    </div>
+                    <div class="form-group">
+                        <label>Service Needed</label>
+                        <select name="service">
                             <option value="">Select a service...</option>
-                            <option>Superalloy Casting</option>
-                            <option>Superalloy Forging</option>
-                            <option>Superalloy Machining</option>
-                            <option>Inconel Casting</option>
-                            <option>Inconel Forging</option>
-                            <option>Inconel Machining</option>
-                            <option>Titanium Casting</option>
-                            <option>Titanium Forging</option>
-                            <option>Titanium Machining</option>
-                            <option>Die Casting</option>
-                            <option>Investment Casting</option>
-                            <option>Sand Casting</option>
-                            <option>CNC Machining</option>
-                            <option>Supply Chain Management</option>
-                            <option>Other</option>
+                            <option value="Superalloy Casting">Superalloy Casting</option>
+                            <option value="Superalloy Forging">Superalloy Forging</option>
+                            <option value="Superalloy Machining">Superalloy Machining</option>
+                            <option value="Inconel Casting">Inconel Casting</option>
+                            <option value="Inconel Forging">Inconel Forging</option>
+                            <option value="Inconel Machining">Inconel Machining</option>
+                            <option value="Titanium Casting">Titanium Casting</option>
+                            <option value="Titanium Forging">Titanium Forging</option>
+                            <option value="Titanium Machining">Titanium Machining</option>
+                            <option value="Die Casting">Die Casting</option>
+                            <option value="Investment Casting">Investment Casting</option>
+                            <option value="Sand Casting">Sand Casting</option>
+                            <option value="CNC Machining">CNC Machining</option>
+                            <option value="Supply Chain Management">Supply Chain Management</option>
+                            <option value="Other">Other</option>
                         </select>
                     </div>
-                    <div class="form-group"><label>Project Details *</label><textarea rows="5" placeholder="Describe your project, materials, quantities, and any special requirements..."></textarea></div>
-                    <button class="btn btn-primary btn-lg btn-block">Submit Quote Request</button>
+                    <div class="form-group">
+                        <label>Project Details *</label>
+                        <textarea name="details" rows="5" required placeholder="Describe your project, materials, quantities, and any special requirements..."></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-lg btn-block">Submit Quote Request</button>
                 </form>
             </div>
         </div>
